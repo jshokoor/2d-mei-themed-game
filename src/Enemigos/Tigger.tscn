@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dntw1ef8trvag"]
+
+[ext_resource type="Script" uid="uid://sc80jytir4jq" path="res://src/Enemigos/character_body_2d.gd" id="1_1vs72"]
+[ext_resource type="Script" uid="uid://ddsw0s4kqha8i" path="res://src/Player/sprite_2d.gd" id="2_ut51u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lgpyn"]
+
+[node name="Tigger" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1vs72")
+speed = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_lgpyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+script = ExtResource("2_ut51u")
